@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>itsarisouss</title>
+<meta name="description" content="I'm Ari. I build with Claude and share what I make: a free setup kit, a free skill and short videos for beginners.">
+<meta property="og:title" content="I'm Ari. I build with Claude. Copy my setup.">
+<meta property="og:description" content="Free guides and free skills for Claude beginners. No sign-up.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://arisouss.github.io/">
+<meta property="og:image" content="https://arisouss.github.io/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f8e9da">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23e5262b'/%3E%3C/svg%3E">
+<style>
+/* Same look as the Claude setup kit: warm paper, white cards, soft shadows.
+   Red is used twice only: one headline phrase and the one main button. */
+:root{--acc:#e5262b;--acc-ink:#b3151a;--wash:#f8e9da;--paper:#f4f1ea;--card:#fff;--bd:#e8e2d5;--ink:#2e2b25;--text:#4a463e;--mut:#8c8576;--soft:#f1ede4;
+  --lift:0 1px 2px rgba(40,30,10,.05),0 10px 24px rgba(40,30,10,.07);
+  --lift2:0 2px 4px rgba(40,30,10,.05),0 28px 64px rgba(40,30,10,.13);
+  --font:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--text);font:18px/1.6 var(--font);-webkit-font-smoothing:antialiased;background-color:var(--paper);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32  0 0 0 0 .27  0 0 0 0 .2  0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"),linear-gradient(180deg,var(--wash) 0,var(--paper) 100%);
+  background-repeat:repeat,no-repeat;background-size:180px 180px,100% 640px}
+a{color:inherit}
+h1,h2,h3{color:var(--ink);margin:0;letter-spacing:-.02em}
+p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:8px}
+
+/* top bar */
+.bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0 0}
+.brand{font-weight:800;font-size:1rem;color:var(--ink);text-decoration:none;padding:8px 0}
+.bar .ig{font-weight:600;font-size:.9rem;color:var(--ink);text-decoration:none;border:1px solid #cfc8b8;border-radius:999px;padding:8px 16px;background:rgba(255,255,255,.6)}
+.bar .ig:hover{background:#fff}
+
+/* hero: words first, the moving picture right under them (beside them on a wide screen) */
+.hero{display:grid;gap:34px;padding:38px 0 12px;align-items:center}
+.kicker{font:700 .74rem var(--font);letter-spacing:.16em;text-transform:uppercase;color:var(--mut);margin-bottom:14px}
+h1{font-size:clamp(2.2rem,8.6vw,3.5rem);line-height:1.06;font-weight:800;letter-spacing:-.03em}
+h1 em{font-style:normal;color:var(--acc)}
+.lede{font-size:1.14rem;line-height:1.55;margin:18px 0 26px;max-width:26em}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 1.02rem var(--font);color:#fff;text-decoration:none;background:var(--acc);
+  box-shadow:0 3px 0 var(--acc-ink);border-radius:14px;padding:15px 24px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--acc-ink)}
+.btn:active{transform:translateY(2px);box-shadow:0 1px 0 var(--acc-ink)}
+.loop{margin:0;min-width:0}
+.loop .frame{border-radius:20px;overflow:hidden;background:var(--card);border:1px solid var(--bd);box-shadow:var(--lift2);aspect-ratio:684/998;max-width:420px;margin:0 auto}
+.loop video{display:block;width:100%;height:100%;object-fit:cover}
+.loop figcaption{font-size:.84rem;color:var(--mut);text-align:center;margin-top:12px}
+@media (min-width:900px){
+  .hero{grid-template-columns:1.1fr .9fr;gap:64px;padding:70px 0 30px}
+  .loop .frame{max-width:400px}
+}
+
+/* doors */
+.doors-title{font-size:1.5rem;font-weight:800;margin:56px 0 18px}
+.doors{display:grid;gap:16px;grid-template-columns:1fr}
+.door{display:flex;gap:16px;align-items:flex-start;background:var(--card);border:1px solid var(--bd);border-radius:20px;padding:22px;text-decoration:none;
+  box-shadow:var(--lift);transition:transform .2s,box-shadow .2s}
+.door:hover{transform:translateY(-2px);box-shadow:var(--lift2)}
+.door .ico{flex:none;width:46px;height:46px;border-radius:50%;background:var(--soft);display:grid;place-items:center}
+.door .ico svg{width:22px;height:22px;stroke:var(--ink);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.door .tx{min-width:0;flex:1}
+.door .tag{display:block;font:700 .7rem var(--font);letter-spacing:.14em;text-transform:uppercase;color:var(--mut);margin-bottom:2px}
+.door h3{font-size:1.2rem;line-height:1.25;font-weight:800}
+.door p{font-size:.98rem;line-height:1.5;margin-top:6px;overflow-wrap:anywhere}
+.door .go{flex:none;align-self:center;color:var(--mut);font-weight:700;font-size:1.2rem;transition:transform .2s,color .2s}
+.door:hover .go{transform:translateX(3px);color:var(--ink)}
+.door.main{padding:26px 22px}
+.door.main h3{font-size:1.45rem}
+@media (min-width:900px){
+  .doors{grid-template-columns:repeat(3,1fr)}
+  .door.main{grid-column:1 / -1;padding:32px 30px}
+  .door:not(.main){flex-direction:column}
+  .door:not(.main) .go{display:none}
+}
+
+footer{margin:64px 0 0;padding:26px 0 44px;border-top:1px solid var(--bd);font-size:.88rem;color:var(--mut)}
+@media (prefers-reduced-motion:reduce){.btn,.door,.door .go{transition:none}}
+</style></head>
+<body>
+<div class="wrap">
+
+  <header class="bar">
+    <a class="brand" href="./">itsarisouss</a>
+    <a class="ig" href="https://www.instagram.com/itsarisouss/" target="_blank" rel="noopener">Instagram</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="kicker">Claude, for beginners</p>
+        <h1>I'm Ari. I build with Claude. <em>Copy my setup.</em></h1>
+        <p class="lede">I share what I learn as I go. Free guides and free skills. No sign-up.</p>
+        <a class="btn" href="https://arisouss.github.io/claude-setup-kit/">Open the Claude setup kit <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <figure class="loop">
+        <div class="frame">
+          <video id="heroLoop" muted loop playsinline autoplay preload="metadata" poster="assets/hero-poster.jpg" width="684" height="998" aria-label="The setup chat from the Claude setup kit, playing in a loop">
+            <source src="assets/hero-loop.mp4" type="video/mp4">
+          </video>
+        </div>
+        <figcaption>From the setup kit. Dana is a made-up example.</figcaption>
+      </figure>
+    </section>
+
+    <h2 class="doors-title">Pick a door</h2>
+    <div class="doors">
+      <a class="door main" href="https://arisouss.github.io/claude-setup-kit/">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></span>
+        <span class="tx"><span class="tag">Start here · Free</span><h3>Claude setup kit</h3><p>Set Claude up once, one small step at a time. Then the basics, tips, skills and Claude Code.</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="door" href="https://github.com/arisouss/edit-like-a-pro" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg></span>
+        <span class="tx"><span class="tag">Free skill</span><h3>edit-like-a-pro</h3><p>A Claude Code skill that edits a raw talking video into a short. Free on GitHub.</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="door" href="https://www.instagram.com/itsarisouss/" target="_blank" rel="noopener">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg></span>
+        <span class="tx"><span class="tag">Watch</span><h3>@itsarisouss</h3><p>Short videos on Instagram. I show what I build and how I do it.</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+      <a class="door" href="mailto:itsarisouss@gmail.com">
+        <span class="ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <span class="tx"><span class="tag">Contact</span><h3>Say hi</h3><p>Questions or ideas? Write to itsarisouss@gmail.com</p></span>
+        <span class="go" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </main>
+
+  <footer>Made by Ari, with Claude. This is my own site. It is not made by Anthropic.</footer>
+</div>
+<script>
+/* The loop is silent and small. If the phone asks for less motion, show the still picture instead. */
+(function(){var v=document.getElementById('heroLoop');if(!v)return;
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches){v.removeAttribute('autoplay');v.pause();return}
+  var p=v.play();if(p&&p.catch)p.catch(function(){});})();
+</script>
+</body></html>
